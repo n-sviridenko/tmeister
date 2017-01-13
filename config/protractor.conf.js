@@ -1,7 +1,7 @@
 require('ts-node/register');
 var helpers = require('./helpers');
 
-exports.config = {
+const config = {
   baseUrl: 'http://localhost:3000/',
 
   specs: [
@@ -34,5 +34,13 @@ exports.config = {
     browser.ignoreSynchronization = true;
   },
 
-   useAllAngular2AppRoots: true
+  useAllAngular2AppRoots: true
 };
+
+if (process.env.TRAVIS) {
+  config.capabilities = {
+    browserName: 'firefox'
+  };
+}
+
+exports.config = config;
