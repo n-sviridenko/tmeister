@@ -51,7 +51,7 @@ describe('TrafficSearchItemComponent', () => {
     const expectedColorNames = ['• red', '• blue'];
     const colorNames = colors.map(item => item.nativeElement.innerText.trim());
 
-    expect(header.nativeElement.style.backgroundImage).toBe(`url("${expectedImageUrl}")`);
+    expect(header.nativeElement.style.backgroundImage).toContain(expectedImageUrl);
     expect(block.nativeElement.innerText.trim()).toBe(expectedBrand);
     expect(icon.nativeElement.className).toContain('fa-plane');
     expect(colorNames).toEqual(expectedColorNames);
