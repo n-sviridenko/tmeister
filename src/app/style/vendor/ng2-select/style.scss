@@ -1,0 +1,8 @@
+// fix compatibility with the bootstrap 4
+.ui-select-choices {
+  display: block;
+}
+
+.ui-select-match-item {
+  -webkit-appearance: none !important;
+}

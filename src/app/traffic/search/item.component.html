@@ -1,0 +1,19 @@
+<div class="card card-outline-secondary">
+
+  <div class="card-header {{css.image}}" [ngStyle]="{ 'background-image': 'url(' + vehicle.imageUrl + ')' }"></div>
+
+  <div class="card-block text-truncate">
+    <i class="fa fa-{{typeIcon}}"></i>
+    {{vehicle.brand}}
+  </div>
+
+  <div *ngIf="vehicle.colors.length" class="card-footer">
+    <span *ngFor="let color of vehicle.colors">
+      <span class="badge badge-default">
+        <span [ngStyle]="{ color: color.value }">&bull;</span>
+        {{color.name}}
+      </span>
+    </span>
+  </div>
+
+</div>

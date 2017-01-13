@@ -1,0 +1,5 @@
+<div *ngFor="let vehicleGroup of vehicleGroups" class="row mb-3">
+  <div *ngFor="let vehicle of vehicleGroup" class="col-sm-{{12 / columnCount}}">
+    <t-traffic-search-item [vehicle]="vehicle"></t-traffic-search-item>
+  </div>
+</div>

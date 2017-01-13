@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title><%= webpackConfig.metadata.title %></title>
+
+  <meta name="description" content="<%= webpackConfig.metadata.title %>">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <meta name="msapplication-TileColor" content="#00bcd4">
+  <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-150x150.png">
+  <meta name="theme-color" content="#00bcd4">
+
+  <base href="<%= webpackConfig.metadata.baseUrl %>">
+
+</head>
+
+<body>
+
+  <t-app>
+    Loading...
+  </t-app>
+
+  <% if (webpackConfig.metadata.isDevServer && webpackConfig.metadata.HMR !== true) { %>
+    <!-- Webpack Dev Server reload -->
+    <script src="/webpack-dev-server.js"></script>
+  <% } %>
+
+</body>
+</html>

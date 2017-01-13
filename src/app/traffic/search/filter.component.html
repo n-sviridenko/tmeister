@@ -1,0 +1,29 @@
+<t-traffic-search-filter-form
+  [model]="filter"
+  [types]="types"
+  [brands]="brands"
+  [colors]="colors"
+  (formSubmit)="onFormSubmit()"
+></t-traffic-search-filter-form>
+
+<div *ngIf="isFilterNotEmpty()">
+  <label i18n>t.traffic.search.filter.selected_filters</label>
+  <div>
+
+    <span *ngFor="let type of filter.types">
+      <span class="badge badge-default">{{type}}</span>
+    </span>
+
+    <span *ngFor="let brand of filter.brands">
+      <span class="badge badge-default">{{brand}}</span>
+    </span>
+
+    <span *ngFor="let color of filter.colors">
+      <span class="badge badge-default">
+        <span [ngStyle]="{ color: color.value }">&bull;</span>
+        {{color.name}}
+      </span>
+    </span>
+
+  </div>
+</div>

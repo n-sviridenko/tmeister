@@ -1,0 +1,25 @@
+<h1 class="mb-4 big-fext" i18n>t.traffic.search.header</h1>
+
+<div class="row">
+  <div class="col-sm-4">
+
+    <t-traffic-search-filter
+      [filter]="filter"
+      [vehicles]="vehicles"
+      (filterUpdate)="load()"
+    ></t-traffic-search-filter>
+
+  </div>
+  <div class="col-sm-8">
+
+    <t-loadable
+      [loading]="loading"
+      [error]="error"
+      [allowReload]="true"
+      (reload)="load()"
+    >
+      <t-traffic-search-list [vehicles]="vehicles"></t-traffic-search-list>
+    </t-loadable>
+
+  </div>
+</div>

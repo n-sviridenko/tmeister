@@ -1,0 +1,48 @@
+<form #form="ngForm">
+
+  <div class="form-group">
+    <label i18n>t.traffic.search.filter_form.types</label>
+    <div>
+      <t-select
+        name="types"
+        [(ngModel)]="model.types"
+        [items]="types"
+        [itemTransformer]="typeTransformer"
+        [multiple]="true"
+        i18n-placeholder
+        placeholder="t.traffic.search.filter_form.no_types_selected"
+      ></t-select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label i18n>t.traffic.search.filter_form.brands</label>
+    <div>
+      <t-select
+        name="brands"
+        [(ngModel)]="model.brands"
+        [items]="brands"
+        [itemTransformer]="brandTransformer"
+        [multiple]="true"
+        i18n-placeholder
+        placeholder="t.traffic.search.filter_form.no_brands_selected"
+      ></t-select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label i18n>t.traffic.search.filter_form.colors</label>
+    <div>
+      <t-select
+        name="colors"
+        [(ngModel)]="model.colors"
+        [items]="colors"
+        [itemTransformer]="colorTransformer"
+        [multiple]="true"
+        i18n-placeholder
+        placeholder="t.traffic.search.filter_form.no_colors_selected"
+      ></t-select>
+    </div>
+  </div>
+
+</form>
