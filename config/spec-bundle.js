@@ -14,10 +14,13 @@ require('zone.js/dist/jasmine-patch');
 // RxJS
 require('rxjs');
 
-const { TestBed } = require('@angular/core/testing');
-const { platformBrowserDynamicTesting, BrowserDynamicTestingModule } = require('@angular/platform-browser-dynamic/testing');
+var testing = require('@angular/core/testing');
+var browser = require('@angular/platform-browser-dynamic/testing');
 
-TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+testing.TestBed.initTestEnvironment(
+  browser.BrowserDynamicTestingModule,
+  browser.platformBrowserDynamicTesting()
+);
 
 var testContext = require.context('../src', true, /\.spec\.ts/);
 
