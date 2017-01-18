@@ -12,6 +12,23 @@ $ npm install
 $ yarn install
 ```
 
+# Running the app
+
+### In development mode
+
+Run `npm run server` to start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. Visit [http://localhost:3000/webpack-dev-server/](http://localhost:3000/webpack-dev-server/).
+
+### In production mode
+
+Run the following commands:
+
+```
+$ npm run build:prod
+$ npm run server:prod
+```
+
+Visit [http://localhost:8080/](http://localhost:8080/).
+
 # Development
 
 ```
@@ -31,6 +48,7 @@ $ npm run server:dev
 # development (with live reload and hot module replacement)
 $ npm run server:dev:hmr
 # production
+$ npm run build:prod
 $ npm run server:prod
 ```
 
